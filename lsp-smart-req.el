@@ -38,83 +38,112 @@
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/lsp-smart-req"))
 
 (defcustom lsp-smart-req-rules
-  `((cc-mode                           . ( ccls
-                                           lsp-clangd))
-    (actionscript-mode                 . lsp-actionscript)
+  `((cc-mode                             . ( ccls
+                                             lsp-clangd))
+    (actionscript-mode                   . lsp-actionscript)
     ((asm-mode fasm-mode masm-mode nasm-mode gas-mode)
      . lsp-asm)
-    ((astro-mode astro-ts-mode)        . lsp-astro)
-    ((awk-mode awk-ts-mode)            . lsp-awk)
-    ((sh-script                        . lsp-bash))
-    (beancount-mode                    . lsp-beancount)
-    (protobuf-mode                     . lsp-bufls)
-    (clojure-mode                      . lsp-clojure)
-    (cmake-mode                        . lsp-cmake)
-    (cobol-mode                        . lsp-cobol)
-    (elixir-mode                       . ( lsp-credo
-                                           lsp-elixir))
-    (crystal-mode                      . lsp-crystal)
-    (csharp-mode                       . lsp-csharp)
-    ((c3-mode c3-ts-mode)              . lsp-c3)
-    (feature-mode                      . lsp-cucumber)
-    (cypher-mode                       . lsp-cypher)
-    (d-mode                            . lsp-d)
-    (dart-mode                         . lsp-dart)
-    (dhall-mode                        . lsp-dhall)
-    (docker                            . ( lsp-docker
-                                           lsp-dockerfile))
-    (earthfile-mode                    . lsp-earthly)
-    (elm-mode                          . lsp-elm)
-    (erlang                            . lsp-erlang)
-    ((f90-mode fortran-mode)           . lsp-fortran)
-    (futhark-mode                      . lsp-futhark)
-    (fsharp-mode                       . lsp-fsharp)
-    (gdscript-mode                     . lsp-gdscript)
-    (gleam-mode                        . lsp-gleam)
-    ((shader-mode glsl-mode hlsl-mode) . lsp-glsl)
-    (go-mode                           . ( lsp-go
-                                           lsp-golangci-lint))
-    (graphql-mode                      . lsp-graphql)
-    (groovy-mode                       . lsp-groovy)
-    (hack-mode                         . lsp-hack)
-    (haskell-mode                      . lsp-haskell)
-    (haxe-mode                         . lsp-haxe)
-    ((idris-mode idris2-mode)          . lsp-idris)
-    (text-mode                         . ( lsp-grammarly
-                                           lsp-ltex
-                                           lsp-ltex-plus))
+    ((astro-mode astro-ts-mode)          . lsp-astro)
+    ((awk-mode awk-ts-mode)              . lsp-awk)
+    ((sh-script                          . lsp-bash))
+    (beancount-mode                      . lsp-beancount)
+    (protobuf-mode                       . lsp-bufls)
+    (clojure-mode                        . lsp-clojure)
+    (cmake-mode                          . lsp-cmake)
+    (cobol-mode                          . lsp-cobol)
+    (elixir-mode                         . ( lsp-credo
+                                             lsp-elixir))
+    (crystal-mode                        . lsp-crystal)
+    (csharp-mode                         . lsp-csharp)
+    ((c3-mode c3-ts-mode)                . lsp-c3)
+    (feature-mode                        . lsp-cucumber)
+    (cypher-mode                         . lsp-cypher)
+    (d-mode                              . lsp-d)
+    (dart-mode                           . lsp-dart)
+    (dhall-mode                          . lsp-dhall)
+    (docker                              . ( lsp-docker
+                                             lsp-dockerfile))
+    (earthfile-mode                      . lsp-earthly)
+    (elm-mode                            . lsp-elm)
+    (erlang                              . lsp-erlang)
+    (fennel-mode                         . lsp-fennel)
+    ((f90-mode fortran-mode)             . lsp-fortran)
+    (futhark-mode                        . lsp-futhark)
+    (fsharp-mode                         . lsp-fsharp)
+    (gdscript-mode                       . lsp-gdscript)
+    (gleam-mode                          . lsp-gleam)
+    ((shader-mode glsl-mode hlsl-mode)   . lsp-glsl)
+    (go-mode                             . ( lsp-go
+                                             lsp-golangci-lint))
+    (graphql-mode                        . lsp-graphql)
+    (groovy-mode                         . lsp-groovy)
+    (hack-mode                           . lsp-hack)
+    (haskell-mode                        . lsp-haskell)
+    (haxe-mode                           . lsp-haxe)
+    ((idris-mode idris2-mode)            . lsp-idris)
+    (java-mode                           . lsp-java)
+    ((jq-mode jq-ts-mode)                . lsp-jq)
+    (json-mode                           . lsp-json)
+    (kotlin-mode                         . lsp-kotlin)
+    (latex                               . lsp-latex)
+    (lisp-mode                           . lsp-lisp)
+    (text-mode                           . ( lsp-grammarly
+                                             lsp-ltex
+                                             lsp-ltex-plus))
+    (lua-mode                            . lsp-lua)
+    (magik-mode                          . lsp-magik)
+    (markdown-mode                       . ( lsp-markdown
+                                             lsp-marksman
+                                             lsp-mdx))
+    (matlab-mode                         . lsp-matlab)
+    (meson-mode                          . lsp-meson)
+    ((scala-mode scala-ts-mode)          . lsp-metals)
+    (mint-mode                           . lsp-mint)
+    ;;(. lsp-mojo)
+    (move-mode                           . lsp-move)
+    (sql                                 . lsp-mssql)
+    (nextflow-mode                       . lsp-nextflow)
+    (nginx-mode                          . lsp-nginx)
+    (nim-mode                            . lsp-nim)
+    (nix-mode                            . lsp-nix)
+    ;;(. lsp-nushell)
+    ((reason-mode caml-mode tuareg-mode) . lsp-ocaml)
+    (scad-mode                           . lsp-openscad)
+    ((opascal-mode pascal-mode)          . lsp-pascal)
     (( autoconf-mode
        makefile-mode
        makefile-automake-mode
        makefile-gmake-mode
        makefile-makepp-mode
        makefile-bsdmake-mode
-       makefile-imake-mode)            . lsp-autotools)
-    ((gpr-mode gpr-ts-mode)            . lsp-ada)
+       makefile-imake-mode)              . lsp-autotools)
+    ((gpr-mode gpr-ts-mode)              . lsp-ada)
     (( html-mode css-mode js-mode
        web-mode
        javascript-mode
        typescript-mode)
-     . ( lsp-angular lsp-css lsp-emmet lsp-eslint))
-    (ruby-mode                         . ( lsp-rubocop
-                                           lsp-ruby-lsp
-                                           lsp-ruby-syntax-tree
-                                           lsp-typeprof))
-    ((typespec-mode typespec-ts-mode)  . lsp-typespec)
-    (v-mode                            . lsp-v)
-    (vala-mode                         . lsp-vala)
-    (verilog-mode                      . lsp-verilog)
+     . ( lsp-angular lsp-css lsp-emmet lsp-eslint lsp-javascript))
+    (ruby-mode                           . ( lsp-rubocop
+                                             lsp-ruby-lsp
+                                             lsp-ruby-syntax-tree
+                                             lsp-typeprof))
+    ((typespec-mode typespec-ts-mode)    . lsp-typespec)
+    (v-mode                              . lsp-v)
+    (vala-mode                           . lsp-vala)
+    (verilog-mode                        . lsp-verilog)
     ;;(. lsp-vetur)
-    ((vhdl-mode vhdl-ts-mode)          . lsp-vhdl)
-    ((vimrc-mode vimscript-ts-mode)    . lsp-vimscript)
+    ((vhdl-mode vhdl-ts-mode)            . lsp-vhdl)
+    ((vimrc-mode vimscript-ts-mode)      . lsp-vimscript)
     ;;(. lsp-volar)
-    (wgsl-mode                         . lsp-wgsl)
-    ((xml-mode nxml-mode)              . lsp-xml)
-    (yaml-mode                         . (lsp-ansible lsp-yaml))
-    (yang-mode                         . lsp-yang)
-    (zig-mode                          . lsp-zig)
+    (wgsl-mode                           . lsp-wgsl)
+    ((xml-mode nxml-mode)                . lsp-xml)
+    (yaml-mode                           . ( lsp-yaml
+                                             lsp-ansible
+                                             lsp-kubernetes-helm))
+    (yang-mode                           . lsp-yang)
+    (zig-mode                            . lsp-zig)
     ;; XXX: Must load.
-    (lsp-mode                          . ( lsp-copilot)))
+    (lsp-mode                            . ( lsp-copilot)))
   "Rules to require necessary packages.
 
 See the variable `lsp-client-packages' for all available packages."
