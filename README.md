@@ -6,8 +6,9 @@
 
 [![CI](https://github.com/jcs-elpa/lsp-smart-req/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/lsp-smart-req/actions/workflows/test.yml)
 
+WIP.
 
-# 🔨 Quickstart
+# 🔨 Usage
 
 ```elisp
 (lsp-smart-req-mode 1)
