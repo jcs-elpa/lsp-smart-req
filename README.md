@@ -6,7 +6,10 @@
 
 [![CI](https://github.com/jcs-elpa/lsp-smart-req/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/lsp-smart-req/actions/workflows/test.yml)
 
-WIP.
+With `lsp-auto-configure` flag is on, `lsp-mode` will try to load all packages
+listed in the variable `lsp-client-packages`. It will also load unnecessary
+packages, that you don't need. This package prevent that and make all modules
+lazy load instead. This prevent `lsp-mode` from taking too long on the start up.
 
 ## 🔨 Usage
 
