@@ -1,6 +1,6 @@
 (package "lsp-smart-req"
          "0.1.0"
-         "Require only the necessary modules")
+         "Lazy load LSP packages")
 
 (website-url "https://github.com/jcs-elpa/lsp-smart-req")
 (keywords "internal" "lsp")

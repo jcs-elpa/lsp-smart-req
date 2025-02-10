@@ -2,7 +2,7 @@
 [![JCS-ELPA](https://raw.githubusercontent.com/jcs-emacs/badges/master/elpa/v/lsp-smart-req.svg)](https://jcs-emacs.github.io/jcs-elpa/#/lsp-smart-req)
 
 # lsp-smart-req
-> Require only the necessary modules
+> Lazy load LSP packages
 
 [![CI](https://github.com/jcs-elpa/lsp-smart-req/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/lsp-smart-req/actions/workflows/test.yml)
 

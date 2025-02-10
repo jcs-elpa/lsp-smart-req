@@ -1,4 +1,4 @@
-;;; lsp-smart-req.el --- Require only the necessary modules  -*- lexical-binding: t; -*-
+;;; lsp-smart-req.el --- Lazy load LSP packages  -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025  Shen, Jen-Chieh
 
@@ -25,6 +25,8 @@
 ;; along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
+;;
+;; Lazy load LSP packages.
 ;;
 ;; Require only the necessary modules.
 ;;
