@@ -45,7 +45,7 @@
      . lsp-asm)
     ((astro-mode astro-ts-mode)          . lsp-astro)
     ((awk-mode awk-ts-mode)              . lsp-awk)
-    ((sh-script                          . lsp-bash))
+    (sh-script                           . lsp-bash)
     (beancount-mode                      . lsp-beancount)
     (protobuf-mode                       . lsp-bufls)
     (clojure-mode                        . lsp-clojure)
@@ -119,7 +119,7 @@
     ((perl-mode cperl-mode)              . ( lsp-perl
                                              lsp-perlnavigator
                                              lsp-pls))
-    ((php-mode                           . lsp-php))
+    (php-mode                            . lsp-php)
     (purescript-mode                     . lsp-purescript)
     (powershell                          . lsp-pwsh)
     (python                              . ( lsp-pyls
