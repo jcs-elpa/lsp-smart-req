@@ -10,8 +10,7 @@
 # 🔨 Quickstart
 
 ```elisp
-(use-package lsp-smart-req
-  :hook (lsp-mode . lsp-smart-req-mode))
+(lsp-smart-req-mode 1)
 ```
 
 ## 🛠️ Contribute
