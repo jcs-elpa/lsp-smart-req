@@ -54,7 +54,8 @@
     (elixir-mode                         . ( lsp-credo
                                              lsp-elixir))
     (crystal-mode                        . lsp-crystal)
-    (csharp-mode                         . lsp-csharp)
+    (csharp-mode                         . ( lsp-csharp
+                                             lsp-roslyn))
     ((c3-mode c3-ts-mode)                . lsp-c3)
     (feature-mode                        . lsp-cucumber)
     (cypher-mode                         . lsp-cypher)
@@ -72,7 +73,8 @@
     (fsharp-mode                         . lsp-fsharp)
     (gdscript-mode                       . lsp-gdscript)
     (gleam-mode                          . lsp-gleam)
-    ((shader-mode glsl-mode hlsl-mode)   . lsp-glsl)
+    ((shader-mode glsl-mode hlsl-mode)   . ( lsp-shader
+                                             lsp-glsl))
     (go-mode                             . ( lsp-go
                                              lsp-golangci-lint))
     (graphql-mode                        . lsp-graphql)
@@ -85,7 +87,8 @@
     ((jq-mode jq-ts-mode)                . lsp-jq)
     (json-mode                           . lsp-json)
     (kotlin-mode                         . lsp-kotlin)
-    (latex                               . lsp-latex)
+    ((tex-mode latex)                    . ( lsp-latex
+                                             lsp-tex))
     (lisp-mode                           . lsp-lisp)
     (text-mode                           . ( lsp-grammarly
                                              lsp-ltex
@@ -94,22 +97,43 @@
     (magik-mode                          . lsp-magik)
     (markdown-mode                       . ( lsp-markdown
                                              lsp-marksman
-                                             lsp-mdx))
+                                             lsp-mdx
+                                             lsp-remark))
     (matlab-mode                         . lsp-matlab)
     (meson-mode                          . lsp-meson)
     ((scala-mode scala-ts-mode)          . lsp-metals)
     (mint-mode                           . lsp-mint)
-    ;;(. lsp-mojo)
+    (mojo                                . lsp-mojo)
     (move-mode                           . lsp-move)
-    (sql                                 . lsp-mssql)
+    (sql                                 . ( lsp-sql
+                                             lsp-sqls
+                                             lsp-mssql))
     (nextflow-mode                       . lsp-nextflow)
     (nginx-mode                          . lsp-nginx)
     (nim-mode                            . lsp-nim)
     (nix-mode                            . lsp-nix)
-    ;;(. lsp-nushell)
+    (nushell-mode                        . lsp-nushell)
     ((reason-mode caml-mode tuareg-mode) . lsp-ocaml)
     (scad-mode                           . lsp-openscad)
     ((opascal-mode pascal-mode)          . lsp-pascal)
+    ((perl-mode cperl-mode)              . ( lsp-perl
+                                             lsp-perlnavigator
+                                             lsp-pls))
+    ((php-mode                           . lsp-php))
+    (purescript-mode                     . lsp-purescript)
+    (powershell                          . lsp-pwsh)
+    (python                              . ( lsp-pyls
+                                             lsp-pylsp
+                                             lsp-pyright
+                                             lsp-python-ms
+                                             lsp-pylyzer
+                                             lsp-ruff))
+    (qml-mode                            . lsp-qml)
+    (ess                                 . lsp-r)
+    (racket-mode                         . lsp-racket)
+    (robot-mode                          . lsp-rf)
+    ((roc-mode roc-ts-mode)              . lsp-roc)
+    (rust-mode                           . lsp-rust)
     (( autoconf-mode
        makefile-mode
        makefile-automake-mode
@@ -118,32 +142,46 @@
        makefile-bsdmake-mode
        makefile-imake-mode)              . lsp-autotools)
     ((gpr-mode gpr-ts-mode)              . lsp-ada)
-    (( html-mode css-mode js-mode
-       web-mode
-       javascript-mode
-       typescript-mode)
-     . ( lsp-angular lsp-css lsp-emmet lsp-eslint lsp-javascript))
     (ruby-mode                           . ( lsp-rubocop
                                              lsp-ruby-lsp
                                              lsp-ruby-syntax-tree
+                                             lsp-solargraph
+                                             lsp-sorbet
+                                             lsp-steep
                                              lsp-typeprof))
+    (solidity-mode                       . lsp-solidity)
+    ((swift-mode swift-ts-mode)          . lsp-sourcekit)
+    (terraform-mode                      . lsp-terraform)
+    (tilt-mode                           . lsp-tilt)
+    (conf-toml-mode toml-ts-mode         . lsp-toml)
     ((typespec-mode typespec-ts-mode)    . lsp-typespec)
+    (scheme                              . lsp-ts-query)
+    (ttcn3                               . lsp-ttcn3)
     (v-mode                              . lsp-v)
     (vala-mode                           . lsp-vala)
     (verilog-mode                        . lsp-verilog)
-    ;;(. lsp-vetur)
     ((vhdl-mode vhdl-ts-mode)            . lsp-vhdl)
     ((vimrc-mode vimscript-ts-mode)      . lsp-vimscript)
-    ;;(. lsp-volar)
     (wgsl-mode                           . lsp-wgsl)
     ((xml-mode nxml-mode)                . lsp-xml)
     (yaml-mode                           . ( lsp-yaml
                                              lsp-ansible
-                                             lsp-kubernetes-helm))
+                                             lsp-kubernetes-helm
+                                             lsp-trunk))
     (yang-mode                           . lsp-yang)
     (zig-mode                            . lsp-zig)
-    ;; XXX: Must load.
-    (lsp-mode                            . ( lsp-copilot)))
+    ;; Web development
+    (( html-mode css-mode js-mode
+       web-mode
+       javascript-mode
+       typescript-mode
+       svelte-mode)
+     . ( lsp-angular lsp-css lsp-emmet lsp-eslint lsp-javascript
+         lsp-svelte lsp-tailwindcss lsp-vetur lsp-volar))
+    ;; Multi-purpose
+    (lsp-mode                            . ( lsp-copilot
+                                             lsp-semgrep
+                                             lsp-sonarlint)))
   "Rules to require necessary packages.
 
 See the variable `lsp-client-packages' for all available packages."
