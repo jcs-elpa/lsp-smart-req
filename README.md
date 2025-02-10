@@ -8,7 +8,7 @@
 
 WIP.
 
-# 🔨 Usage
+## 🔨 Usage
 
 ```elisp
 (lsp-smart-req-mode 1)
