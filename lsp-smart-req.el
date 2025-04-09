@@ -109,7 +109,8 @@
     (move-mode                           . lsp-move)
     (sql                                 . ( lsp-sql
                                              lsp-sqls
-                                             lsp-mssql))
+                                             lsp-mssql
+                                             lsp-postgres))
     (nextflow-mode                       . lsp-nextflow)
     (nginx-mode                          . lsp-nginx)
     (nim-mode                            . lsp-nim)
