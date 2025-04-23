@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "lsp-smart-req"
          "0.1.0"
          "Lazy load LSP packages")
