@@ -130,7 +130,8 @@
                                              lsp-pyright
                                              lsp-python-ms
                                              lsp-pylyzer
-                                             lsp-ruff))
+                                             lsp-ruff
+                                             lsp-python-ty))
     (qml-mode                            . lsp-qml)
     (ess                                 . lsp-r)
     (racket-mode                         . lsp-racket)
