@@ -157,7 +157,8 @@
     ((swift-mode swift-ts-mode)          . lsp-sourcekit)
     (terraform-mode                      . lsp-terraform)
     (tilt-mode                           . lsp-tilt)
-    ((conf-toml-mode toml-ts-mode)       . lsp-toml)
+    ((conf-toml-mode toml-ts-mode)       . ( lsp-toml
+                                             lsp-toml-tombi))
     ((typespec-mode typespec-ts-mode)    . lsp-typespec)
     (scheme                              . lsp-ts-query)
     (ttcn3                               . lsp-ttcn3)
