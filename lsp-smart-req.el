@@ -117,6 +117,7 @@
     (nix-mode                            . lsp-nix)
     (nushell-mode                        . lsp-nushell)
     ((reason-mode caml-mode tuareg-mode) . lsp-ocaml)
+    (odin-mode                           . lsp-odin)
     (scad-mode                           . lsp-openscad)
     ((opascal-mode pascal-mode)          . lsp-pascal)
     ((perl-mode cperl-mode)              . ( lsp-perl
