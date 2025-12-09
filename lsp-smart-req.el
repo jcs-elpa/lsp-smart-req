@@ -209,7 +209,9 @@ See the variable `lsp-client-packages' for all available packages."
                     (lsp-smart-req--featurep feat))
                   features))
         (t
-         (featurep features))))
+         ;; XXX: Detect if should be required.
+         (or (featurep features)
+             (equal major-mode features)))))
 
 (defun lsp-smart-req--require (pkgs)
   "Load the client packages PKGS."
