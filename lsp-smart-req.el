@@ -138,6 +138,7 @@
     (racket-mode                         . lsp-racket)
     (robot-mode                          . lsp-rf)
     ((roc-mode roc-ts-mode)              . lsp-roc)
+    (ron-mode                            . lsp-ron)
     (rust-mode                           . lsp-rust)
     (( autoconf-mode
        makefile-mode
