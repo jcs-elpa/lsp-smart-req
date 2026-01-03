@@ -162,6 +162,7 @@
     ((conf-toml-mode toml-ts-mode)       . ( lsp-toml
                                              lsp-toml-tombi))
     ((typespec-mode typespec-ts-mode)    . lsp-typespec)
+    ((typst-mode typst-ts-mode)          . lsp-typst)
     (scheme                              . lsp-ts-query)
     (ttcn3                               . lsp-ttcn3)
     (v-mode                              . lsp-v)
