@@ -170,6 +170,7 @@
     (verilog-mode                        . lsp-verilog)
     ((vhdl-mode vhdl-ts-mode)            . lsp-vhdl)
     ((vimrc-mode vimscript-ts-mode)      . lsp-vimscript)
+    (wat-mode                            . lsp-wat)
     (wgsl-mode                           . lsp-wgsl)
     ((xml-mode nxml-mode)                . lsp-xml)
     (yaml-mode                           . ( lsp-yaml
