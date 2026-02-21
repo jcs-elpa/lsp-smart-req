@@ -55,6 +55,7 @@
     (cobol-mode                          . lsp-cobol)
     (elixir-mode                         . ( lsp-credo
                                              lsp-elixir))
+    (emacs-lisp-mode                     . lsp-ellsp)
     (crystal-mode                        . lsp-crystal)
     (csharp-mode                         . ( lsp-csharp
                                              lsp-roslyn))
