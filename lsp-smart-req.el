@@ -187,7 +187,7 @@
        javascript-mode
        typescript-mode
        svelte-mode)
-     . ( lsp-angular lsp-css lsp-emmet lsp-eslint lsp-javascript
+     . ( lsp-angular lsp-biome lsp-css lsp-emmet lsp-eslint lsp-javascript
          lsp-svelte lsp-tailwindcss lsp-vetur lsp-volar))
     ;; Multi-purpose
     (lsp-mode                            . ( lsp-copilot
