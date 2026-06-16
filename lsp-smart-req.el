@@ -104,6 +104,7 @@
                                              lsp-remark))
     (matlab-mode                         . lsp-matlab)
     (meson-mode                          . lsp-meson)
+    (mlua-mode                           . lsp-mlua)
     ((scala-mode scala-ts-mode)          . lsp-metals)
     (mint-mode                           . lsp-mint)
     (mojo                                . lsp-mojo)
